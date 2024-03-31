@@ -1,7 +1,6 @@
 const Location = require("../models/location"); 
 const axios = require('axios');
 require("dotenv").config();
-console.log(process.env.API_KEY)
 
 
 function getUnixTimestamp(daysAgo) {
@@ -61,7 +60,6 @@ exports.getHistory = async (req, res) => {
         });
 
     } catch (error) {
-        console.log(error)
         res.status(500).json({ error: error.message });
     }
 }

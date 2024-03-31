@@ -21,13 +21,10 @@ exports.postLocationDetails = async (req, res) => {
             return res.status(400).json({ error: "Name, latitude, and longitude are required fields" });
         }
 
-        // Create a new instance of Location model
         const location = new Location({ name, latitude, longitude });
 
-        // Save the location instance to the database
         await location.save();
 
-        // Return success response
         res.status(201).json({
             success: true,
             message: "Location created successfully",
