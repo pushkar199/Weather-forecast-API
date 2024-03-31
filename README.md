@@ -27,12 +27,3 @@ GET: Get the weather forecast for a specific location.
 
 4. /history (upto 30 days) (GET)
 GET: Get historical data and show the summary for the last 30 days.
-## Technical Guidelines
-
-Integrate with an external weather service API to fetch real-time weather data based on location coordinates.
-
-Implemented caching mechanisms to reduce the number of external API calls.
-
-Ensure proper error handling for cases where the external service is unavailable or returns errors.
-
-Used proper validation for location data and handle edge cases gracefully.
